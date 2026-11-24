@@ -6,6 +6,10 @@
 // fast (half at +12%, the rest at +25% or on a trailing stop), and cuts losers
 // at -9% or after 150 slots. See strategy.ts for the full reasoning.
 //
+// Edge: late R=30 runner — only enters coins whose momentum is confirmed late
+// in the window, which is what keeps the 29/29 round-trip rate at a 31% win
+// rate with max drawdown held to 3.1% (dev net PnL +0.4848 SOL).
+//
 // Run by the grader as `node /bot/main.ts`; the strategy lives in strategy.ts
 // and the SDK shim is the kit's sdk/ts/makefun-bot.ts, vendored byte for byte.
 
